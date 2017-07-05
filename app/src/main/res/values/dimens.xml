@@ -7,4 +7,11 @@
     <dimen name="padding_horizontal_login">32dp</dimen>
     <dimen name="textsize_donthaveaccount">13dp</dimen>
     <dimen name="edittext_margin_create_account">10dp</dimen>
+    <dimen name="send_message_field_corner_radious">20dp</dimen>
+    <dimen name="send_message_field_horizontal_margin">5dp</dimen>
+    <dimen name="send_message_field_vertical_margin">5dp</dimen>
+    <dimen name="send_message_horizontal_padding">15dp</dimen>
+    <dimen name="send_message_vertical_padding">2dp</dimen>
+    <dimen name="send_message_field_height">45dp</dimen>
+    <item name="logo_scale" type="dimen" format="float">1.5</item>
 </resources>

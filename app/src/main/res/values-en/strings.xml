@@ -7,7 +7,7 @@
     <string name="dont_have_account">¿You not have an account?, </string>
     <string name="create_account">Create one here.</string>
     <string name="hint_email">Email</string>
-    <string name="hint_username">Nombre de usuario</string>
+    <string name="hint_username">Username</string>
     <string name="hint_name">Name</string>
     <string name="hint_user">User</string>
     <string name="hint_passwd">Password</string>

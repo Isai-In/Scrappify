@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/send_message_ctrls"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:weightSum="10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="@dimen/send_message_field_height"
+        android:layout_weight="8"
+        android:elevation="4dp"
+        android:hint="Escribe un mensaje"
+        android:paddingLeft="@dimen/send_message_horizontal_padding"
+        android:paddingRight="@dimen/send_message_horizontal_padding"
+        android:paddingTop="@dimen/send_message_vertical_padding"
+        android:paddingBottom="@dimen/send_message_vertical_padding"
+        android:layout_marginLeft="@dimen/send_message_field_horizontal_margin"
+        android:layout_marginRight="@dimen/send_message_field_horizontal_margin"
+        android:background="@drawable/send_message_field"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/send_message_field_vertical_margin"
+        android:layout_marginTop="@dimen/send_message_field_vertical_margin"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:src="@drawable/ic_send_message"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:elevation="8dp"/>
+</LinearLayout>
