@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#7C4DFF</color>
     <color name="editTextColorBlack">#999</color>
+    <color name="messageTextColor">#666</color>
     <color name="editTextColorWhite">#FFF</color>
+    <color name="metadataContainerBackgroundColor">#EEE</color>
     <color name="windowBackgroundColor">#607D8B</color>
 </resources>

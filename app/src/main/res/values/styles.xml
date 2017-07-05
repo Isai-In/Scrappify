@@ -38,4 +38,10 @@
         <item name="colorControlActivated">@color/editTextColorBlack</item>
     </style>
 
+    <style name="TextViewBlack" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/edittext_textsize</item>
+        <item name="android:textColorPrimary">@color/messageTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

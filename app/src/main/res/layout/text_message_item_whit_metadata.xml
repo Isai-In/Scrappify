@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/message_padding_top"
+    android:paddingLeft="@dimen/message_padding_left"
+    android:paddingRight="@dimen/message_padding_right"
+    android:paddingBottom="@dimen/message_padding_bottom"
+    android:layout_margin="@dimen/message_margin"
+    android:background="@drawable/spech_bubble">
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+    <LinearLayout
+        android:id="@+id/metadata_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/send_message_field"
+        android:layout_below="@+id/message"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/message_image"
+            android:layout_width="230dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dummy"
+            android:scaleType="centerCrop"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="@dimen/separator_margin"
+            android:background="@color/metadataContainerBackgroundColor" />
+        <TextView
+            android:id="@+id/message_title"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/separator_margin"
+            android:background="@color/metadataContainerBackgroundColor" />
+        <TextView
+            android:id="@+id/message_description"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/message_margin"
+        android:layout_below="@+id/metadata_container"/>
+</RelativeLayout>

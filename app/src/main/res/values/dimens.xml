@@ -13,5 +13,11 @@
     <dimen name="send_message_horizontal_padding">15dp</dimen>
     <dimen name="send_message_vertical_padding">2dp</dimen>
     <dimen name="send_message_field_height">45dp</dimen>
+    <dimen name="message_padding_top">15dp</dimen>
+    <dimen name="message_padding_left">20dp</dimen>
+    <dimen name="message_padding_right">10dp</dimen>
+    <dimen name="message_padding_bottom">10dp</dimen>
+    <dimen name="message_margin">5dp</dimen>
+    <dimen name="separator_margin">3dp</dimen>
     <item name="logo_scale" type="dimen" format="float">1.5</item>
 </resources>
