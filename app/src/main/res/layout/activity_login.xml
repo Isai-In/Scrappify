@@ -81,7 +81,8 @@
                         android:textColor="@android:color/white"
                         android:textStyle="bold"
                         android:textSize="@dimen/textsize_donthaveaccount"
-                        android:layout_toRightOf="@id/dontHaveAccount"/>
+                        android:layout_toRightOf="@id/dontHaveAccount"
+                        android:onClick="goCreateAccount"/>
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
