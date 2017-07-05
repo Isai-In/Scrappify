@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Scrappify</string>
+    <string name="username">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="dont_have_account">¿You not have an account?, </string>
+    <string name="create_account">Create one here.</string>
+</resources>

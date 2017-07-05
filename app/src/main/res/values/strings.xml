@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Scrappify</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button_text">Login</string>
+    <string name="dont_have_account">¿No tienes una cuenta?,</string>
+    <string name="create_account">Crea una aquí.</string>
 </resources>
