@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.isaiin.scrappify.Model.Message;
 import com.isaiin.scrappify.Model.MessageWhitMetaData;
 import com.isaiin.scrappify.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -96,7 +97,7 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
             case 1:
                 TextWhitMetaDataViewHolder textWhitMetaDataViewHolder = (TextWhitMetaDataViewHolder)holder;
                 textWhitMetaDataViewHolder.message.setVisibility(View.GONE);
-                textWhitMetaDataViewHolder.image.setImageResource(((MessageWhitMetaData)message).getImage());
+                Picasso.with(activity.getApplicationContext()).load(((MessageWhitMetaData)message).getImage()).into(textWhitMetaDataViewHolder.image);
                 textWhitMetaDataViewHolder.title.setText(((MessageWhitMetaData)message).getTitle());
                 textWhitMetaDataViewHolder.description.setText(((MessageWhitMetaData)message).getDescription());
                 textWhitMetaDataViewHolder.hour.setText("15:30 pm");
@@ -104,8 +105,8 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
             case 2:
                 TextWhitMetaDataViewHolder textWhitMetaDataViewHolder2 = (TextWhitMetaDataViewHolder)holder;
                 textWhitMetaDataViewHolder2.message.setText(message.getBody());
-                textWhitMetaDataViewHolder2.image.setImageResource(((MessageWhitMetaData)message).getImage());
                 textWhitMetaDataViewHolder2.title.setText(((MessageWhitMetaData)message).getTitle());
+                Picasso.with(activity.getApplicationContext()).load(((MessageWhitMetaData)message).getImage()).into(textWhitMetaDataViewHolder2.image);
                 textWhitMetaDataViewHolder2.description.setText(((MessageWhitMetaData)message).getDescription());
                 textWhitMetaDataViewHolder2.hour.setText("15:30 pm");
                 break;
@@ -117,6 +118,11 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
     @Override
     public int getItemCount() {
         return messages.size();
+    }
+
+    public void addItem(Message message){
+        messages.add(message);
+        notifyDataSetChanged();
     }
 
 

@@ -9,6 +9,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center">
     <EditText
+        android:id="@+id/message_field"
         android:layout_width="0dp"
         android:layout_height="@dimen/send_message_field_height"
         android:layout_weight="8"
@@ -22,7 +23,7 @@
         android:layout_marginRight="@dimen/send_message_field_horizontal_margin"
         android:background="@drawable/send_message_field"/>
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/send"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/send_message_field_vertical_margin"

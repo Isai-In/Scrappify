@@ -14,4 +14,5 @@
     <string name="hint_repeat_passwd">Repeat your password</string>
     <string name="joinus_button_text">JOIN</string>
     <string name="toolbar_title_create_account">Create Account</string>
+    <string name="login_faliure">Somothing happen: </string>
 </resources>

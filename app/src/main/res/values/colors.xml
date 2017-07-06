@@ -7,5 +7,5 @@
     <color name="messageTextColor">#666</color>
     <color name="editTextColorWhite">#FFF</color>
     <color name="metadataContainerBackgroundColor">#EEE</color>
-    <color name="windowBackgroundColor">#607D8B</color>
+    <color name="windowBackgroundColor">#BDBDBD</color>
 </resources>

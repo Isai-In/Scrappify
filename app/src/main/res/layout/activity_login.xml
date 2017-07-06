@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".LoginActivity"
+    tools:context=".Login.View.LoginActivity"
     android:background="@color/colorPrimary">
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,8 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/login_button_text"
-                    android:theme="@style/RaisedButtonDark"
-                    android:onClick="goChatView"/>
+                    android:theme="@style/RaisedButtonDark" />
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -85,6 +84,10 @@
                         android:textSize="@dimen/textsize_donthaveaccount"
                         android:layout_toRightOf="@id/dontHaveAccount"
                         android:onClick="goCreateAccount"/>
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
