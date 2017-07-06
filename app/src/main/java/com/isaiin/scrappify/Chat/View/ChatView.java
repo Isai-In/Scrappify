@@ -12,6 +12,6 @@ public interface ChatView {
     void updateMessagesList(Message message);
     void updateViews();
     void setRecyclerView();
-    void showError();
+    void showError(String error);
 
 }

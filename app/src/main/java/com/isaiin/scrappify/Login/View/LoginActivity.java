@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.isaiin.scrappify.Login.Presenter.LoginPresenter;
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     private Button login;
     private ProgressBar progressBar;
     private LoginPresenter loginPresenter;
+    private TextView createAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         password = (TextInputEditText) findViewById(R.id.password);
         login = (Button) findViewById(R.id.loginButton);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        createAccount = (TextView) findViewById(R.id.createAccount);
         loginPresenter = new LoginPresenterImpl(this);
         hideProgressBar();
         login.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +41,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
                 loginPresenter.signIn(username.getText().toString(), password.getText().toString());
             }
         });
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goCreateAccount();
+            }
+        });
+
     }
 
     @Override

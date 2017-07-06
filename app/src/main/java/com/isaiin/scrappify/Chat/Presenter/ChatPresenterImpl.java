@@ -29,7 +29,7 @@ public class ChatPresenterImpl implements ChatPresenter {
 
     @Override
     public void messageError(String error) {
-        chatView.showError();//need String
+        chatView.showError(error);
     }
 
     @Override

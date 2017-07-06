@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -78,8 +79,8 @@ public class ChatActivity extends AppCompatActivity implements ChatView{
     }
 
     @Override
-    public void showError() {
-
+    public void showError(String error) {
+        Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
     }
 
     @Override

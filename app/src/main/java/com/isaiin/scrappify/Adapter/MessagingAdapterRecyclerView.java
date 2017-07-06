@@ -14,6 +14,8 @@ import com.isaiin.scrappify.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by alejandro.acosta on 05/07/17.
@@ -92,7 +94,7 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
             case 0:
                 TextViewHolder textViewHolder = (TextViewHolder)holder;
                 textViewHolder.message.setText(message.getBody());
-                textViewHolder.hour.setText("15:30 pm");
+                textViewHolder.hour.setText(getDate(message.getDate()));
                 break;
             case 1:
                 TextWhitMetaDataViewHolder textWhitMetaDataViewHolder = (TextWhitMetaDataViewHolder)holder;
@@ -100,7 +102,7 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
                 Picasso.with(activity.getApplicationContext()).load(((MessageWhitMetaData)message).getImage()).into(textWhitMetaDataViewHolder.image);
                 textWhitMetaDataViewHolder.title.setText(((MessageWhitMetaData)message).getTitle());
                 textWhitMetaDataViewHolder.description.setText(((MessageWhitMetaData)message).getDescription());
-                textWhitMetaDataViewHolder.hour.setText("15:30 pm");
+                textWhitMetaDataViewHolder.hour.setText(getDate(message.getDate()));
                 break;
             case 2:
                 TextWhitMetaDataViewHolder textWhitMetaDataViewHolder2 = (TextWhitMetaDataViewHolder)holder;
@@ -108,7 +110,7 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
                 textWhitMetaDataViewHolder2.title.setText(((MessageWhitMetaData)message).getTitle());
                 Picasso.with(activity.getApplicationContext()).load(((MessageWhitMetaData)message).getImage()).into(textWhitMetaDataViewHolder2.image);
                 textWhitMetaDataViewHolder2.description.setText(((MessageWhitMetaData)message).getDescription());
-                textWhitMetaDataViewHolder2.hour.setText("15:30 pm");
+                textWhitMetaDataViewHolder2.hour.setText(getDate(message.getDate()));
                 break;
             default:
                 break;
@@ -123,6 +125,15 @@ public class MessagingAdapterRecyclerView extends RecyclerView.Adapter<RecyclerV
     public void addItem(Message message){
         messages.add(message);
         notifyDataSetChanged();
+    }
+
+    private String getDate(Date d){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(d);
+        int hours = cal.get(Calendar.HOUR_OF_DAY);
+        int minune = cal.get(Calendar.MINUTE);
+        int second = cal.get(Calendar.SECOND);
+        return hours+":"+minune+":"+second;
     }
 
 

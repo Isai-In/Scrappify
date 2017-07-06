@@ -45,6 +45,13 @@ public class ChatRepositoryImpl implements ChatRepository {
 
                     @Override
                     public void onResponse(JSONObject response) {
+                        if (response.has("error")){
+                            try {
+                                presenter.messageError(response.getString("error"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
                         MessageWhitMetaData m;
                         if (message.split(" ").length > 1){
                             try {
@@ -82,7 +89,7 @@ public class ChatRepositoryImpl implements ChatRepository {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.e("RESPONSE", error.toString());
-                        error.printStackTrace();
+                        presenter.messageError(error.getMessage());
                     }
                 }){
 
